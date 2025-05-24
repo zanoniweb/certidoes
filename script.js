@@ -1,6 +1,7 @@
 // Usuários cadastrados no sistema
 const users = [
     { username: "gabrielgab", password: "gabriel1234" },
+    { username: "paulosec", password: "paulosecl1234" },
     { username: "alemaochefe", password: "alemao1234" },
     { username: "junioradm", password: "junioradm123" },
     { username: "edgardadm", password: "edgardadm123" },
@@ -99,3 +100,9 @@ function exibirResultados(resultados) {
 document.getElementById("btnFechar").addEventListener("click", function () {
     document.getElementById("manual").classList.remove("ativo");
 });
+
+// Função de logout
+function logout() {
+    localStorage.removeItem("loggedIn");
+    window.location.href = "index.html";
+}
